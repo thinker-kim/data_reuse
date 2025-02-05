@@ -1,7 +1,7 @@
 # ICPSR - OpenAlex Data Repository
 
-This repository hosts datasets created from the ICPSR data on publications citing ICPSR datasets. These datasets have been cross-referenced with OpenAlex to include only those publications that:
-- Originate from the ICPSR dataset,
+This repository hosts datasets created from publications that cite ICPSR datasets (source: https://github.com/ICPSR/mica-data-descriptor/tree/main). These datasets have been cross-referenced with OpenAlex to include only those publications that:
+- Cite ICPSR datasets,
 - Possess a DOI, and
 - Have matching OpenAlex work IDs (for publications) and OpenAlex author IDs.
 
