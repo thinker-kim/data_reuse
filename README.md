@@ -28,7 +28,7 @@ This file expands the above dataset by disambiguating and splitting the combined
 **Key Variables:**
 - **TITLE, AUTHOR:** Publication title and individual author (each author is now on a separate row)
 - **REF_ID, DOI:** Original publication identifier and DOI
-- **STUD_NUMS, SERIES_NUMS:** Cited study and series numbers (where available)
+- **STUD_NUMS, SERIES_NUMS:** Cited study and series numbers
 - **YEAR_PUB:** Publication year
 
 ---
