@@ -64,7 +64,7 @@ This dataset contains a unique list of authors from the filtered publications al
 
 ---
 
-## 4. Indirect Citation Networks
+## 4. Indirect Data Citation Networks
 
 ### a. `author_data_indirect_citation_pairs.csv`
 This file captures indirect citation relationships between authors who are not coauthors but have independently cited the same ICPSR dataset. In this context, **shared_study_series_num** is a core variable indicating which ICPSR study/series numbers each publication cited to establish the indirect citation relationship.
