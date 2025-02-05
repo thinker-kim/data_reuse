@@ -1,4 +1,4 @@
-# ICPSR - OpenAlex Data Repository
+# Data Reuse and Author Career Dynamics: An Analysis Based on ICPSR and OpenAlex
 
 This repository hosts datasets created from publications that cite ICPSR datasets (source: https://github.com/ICPSR/mica-data-descriptor/tree/main). These datasets have been cross-referenced with OpenAlex to include only those publications that:
 - Cite ICPSR datasets,
