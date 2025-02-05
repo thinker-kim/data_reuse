@@ -97,12 +97,12 @@ This summary dataset aggregates indirect citation information for each author, p
 ## 5. Coauthor Pairs
 
 ### `coauthor_pairs.csv`
-This dataset lists pairs of authors who have coauthored publications, derived from the complete set of publication records.
+This dataset lists pairs of authors who have coauthored publications. It is derived from the complete set of publication records by authors who have published works citing ICPSR datasets, meaning it encompasses all publication data from these authors. This comprehensive coverage highlights the full range of collaborative outputs among the citing authors.
 
 **Key Variables:**
-- **author_1, author_2:** Coauthor pair
-- **shared_work_id:** Identifier for the shared publication
-- **publication_year:** Year of the shared publication
+- **author_1, author_2:** The pair of coauthors
+- **shared_work_id:** Identifier for the shared publication that both authors contributed to
+- **publication_year:** Year in which the shared publication was released
 
 ---
 
