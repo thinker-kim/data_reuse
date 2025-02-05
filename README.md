@@ -121,7 +121,8 @@ This file identifies author pairs that did not have an established coauthorship 
 - **shared_work_ids:** List of shared publication IDs
 - **publication_years:** Years of the publications
 
-*Unique Future Coauthorships:* 5,464 (0.34% of all unique author pairs)
+*Unique Future Coauthorships:* **5,464 pairs** (0.34% of all unique author pairs)  
+*Unique authors in future collaborations:* **3,259 authors** (34.3% of all authors)
 
 ### b. `prior_coauthorships.csv`
 This dataset contains author pairs that were already established as coauthors.
