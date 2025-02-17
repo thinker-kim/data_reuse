@@ -82,9 +82,13 @@ This file captures indirect citation relationships between authors who are not c
 - **shared_study_series_num:** The specific ICPSR study/series number(s) cited by each publication that links the author pair.
 - **author1_author_id, author2_author_id:** The author identifiers corresponding to **author_1** and **author_2**, respectively.
 - **author1_affiliation_id, author2_affiliation_id:** The institution identifiers for **author_1** and **author_2**, respectively.
-- **affiliation_match:** A dummy variable indicating whether the affiliation information for the publication is complete; if either author's institution information is missing (i.e., NaN) for that publication, this value is NaN. In this dataset, the non-null ratio for this variable is **52.96%**; among non-null entries, **98.53%** have a value of 0 and **1.47%** have a value of 1.
+- **affiliation_match:** A dummy variable indicating whether the affiliation information for the publication is complete; if either author's institution information is missing (i.e., NaN) for that publication, this value is NaN.  
+  - In this dataset, among the **3,938,655 unique pairs**, the non-null ratio for this variable is **52.96%**, meaning that affiliation information is available for **approximately 2,085,696 pairs**.  
+  - Among these non-null entries, **98.53% (approximately 2,055,784 pairs)** have a value of 0 (affiliations do not match), and **1.47% (approximately 30,912 pairs)** have a value of 1 (affiliations match).
 - **source_total_authors, target_total_authors:** The total number of authors on the source and target publications, respectively.
-- **historical_affiliation_match:** A dummy variable computed by comparing the entire affiliation history of the author; if at least one affiliation matches across their publication history, this value is 1, otherwise it is NaN if any affiliation information is missing. The non-null ratio for this variable is **89.06%**; among non-null entries, **82.99%** have a value of 0 and **17.01%** have a value of 1.
+- **historical_affiliation_match:** A dummy variable computed by comparing the entire affiliation history of the author; if at least one affiliation matches across their publication history, this value is 1. Otherwise, it is NaN if any affiliation information is missing.  
+  - Among the **3,938,655 unique pairs**, the non-null ratio for this variable is **89.06%**, meaning that historical affiliation information is available for **approximately 3,507,600 pairs**.  
+  - Among these non-null entries, **82.99% (approximately 2,912,750 pairs)** have a value of 0 (no historical affiliation match), and **17.01% (approximately 594,850 pairs)** have a value of 1 (at least one historical affiliation matches).  
 
 ~~### b. `author_data_indirect_citation_pairs_summary.csv`~~  
 ~~This summary dataset aggregates indirect citation information for each author, providing an overview of their citation connections.~~  
