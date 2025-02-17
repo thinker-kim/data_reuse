@@ -65,7 +65,9 @@ This dataset contains a unique list of publication authors who have cited an ICP
 - **Max_Year:** The most recent publication year among the author's works.
 - **Research_Duration:** The span of years between **Min_Year** and **Max_Year**, indicating the duration of the author's research activity.
 - **H-index:** A metric that reflects the author's research impact based on both the productivity and citation impact of their publications.
-
+- **Dataset_PI:** A dummy variable (1 or 0) indicating whether the author appears as a principal investigator (PI) in any ICPSR study or series. In this dataset, **157** authors are flagged as PI.
+- **STUDY_PI_NUMBER:** A semicolon-separated list of study numbers (STUD_NUMS) for which the author is identified as the PI in the study dataset.
+- **SERIES_PI_NUMBER:** A semicolon-separated list of series numbers (SERIES_NUMS) for which the author is identified as the PI in the series dataset.
 ---
 
 ## 4. Indirect Data Citation Networks
