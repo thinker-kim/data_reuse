@@ -107,20 +107,23 @@ This file captures indirect citation relationships between authors who are not c
 
 ~~*Data Shape:* 9,763 entries, with 10 columns in total.~~
 
-**Note:** Section 4.b requires revision.
+*Note:* Section 4.b requires revision.
 ---
 
-~~## 5. Coauthor Pairs~~
+## 5. Coauthor Pairs
 
-~~### `coauthor_pairs.csv`~~  
-~~This dataset lists pairs of authors who have coauthored publications. It is derived from the complete set of publication records by authors who have published works citing ICPSR datasets, meaning it encompasses all publication data from these authors.~~
+### `coauthor_pairs.csv`  
+This dataset lists pairs of authors who have coauthored publications. It includes all coauthorship records from authors who have published works citing ICPSR datasets, as well as their other publications, to analyze **co-authorship networks**.
 
-~~**Key Variables:**~~  
-~~- **author_1, author_2:** The pair of coauthors~~  
-~~- **shared_work_id:** Identifier for the shared publication that both authors contributed to~~  
-~~- **publication_year:** Year in which the shared publication was released~~
+**Key Variables:**  
+- **author1, author2:** The pair of coauthors.  
+- **authorid1, authorid2:** Unique identifiers for each author.  
+- **doi:** Digital Object Identifier (DOI) for the coauthored publication.  
+- **paperid:** Identifier for the publication that both authors coauthored.  
+- **year:** Year in which the coauthored publication was released.  
+- **cited_by_count:** The number of times the coauthored publication has been cited.  
 
-~~---~~
+---
 
 ~~## 6. Future and Prior Coauthorships~~
 
@@ -152,5 +155,5 @@ This file captures indirect citation relationships between authors who are not c
 ~~- **Non-Coauthorships:** 1,612,169 (98.95%)~~  
 ~~- **Total Unique Author Pairs:** 1,629,238~~
 
-**Note:** Section 5 and 6 requires revision.
+*Note:* Section 6 requires revision.
 ---
