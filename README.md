@@ -11,25 +11,22 @@ Below is a concise description of each dataset provided.
 
 ## 1. ICPSR Publications Data
 
-### a. `icpsr_publications_openalex.csv`
-This dataset contains publication records from the original 106,403 ICPSR publications. It was filtered to include only those with:
-- A DOI (47,086 records), and
-- An OpenAlex work ID (29,326 records).
+### `icpsr_publications.csv`
+This dataset contains publication records from the original 106,403 ICPSR publications. Among these, only those publications with valid identifiers in both SciScinet and OpenAlex were retained—resulting in a total of 36,526 unique publications (based on REF_ID). In this dataset, if a publication has multiple authors, each author is expanded into an individual record, so the total number of rows exceeds 36,526.            
+**Number of unique authors: 15,733.**
 
 **Key Variables:**
-- **REF_ID:** Unique publication identifier (from ICPSR)
-- **DOI, TITLE, AUTHORS:** Publication DOI, title, and authors (multiple authors are separated by a semicolon)
-- **STUD_NUMS, SERIES_NUMS:** ICPSR study and series numbers cited by the publication
-- **YEAR_PUB:** Year of publication
-
-### b. `icpsr_publications_openalex_expanded.csv`
-This file expands the above dataset by disambiguating and splitting the combined author field into individual records. It standardizes author names to the OpenAlex format (first name followed by last name).
-
-**Key Variables:**
-- **TITLE, AUTHOR:** Publication title and individual author (each author is now on a separate row)
-- **REF_ID, DOI:** Original publication identifier and DOI
-- **STUD_NUMS, SERIES_NUMS:** Cited study and series numbers
-- **YEAR_PUB:** Publication year
+- **REF_ID:** Unique publication identifier (from ICPSR).
+- **DOI:** Digital Object Identifier for the publication.
+- **Title:** Title of the publication.
+- **Paper_ID:** Unique paper identifier (default is from SciScinet; if unavailable, OpenAlex is provided).
+- **Author:** Name of the publication author.
+- **Author_ID:** Identifier(s) for the author from SciScinet and OpenAlex.
+- **STUD_NUMS, SERIES_NUMS:** ICPSR study and series numbers cited by the publication.
+- **YEAR_PUB:** Year of publication.
+- **Affiliation_ID:** Identifier(s) for the author's affiliation from SciScinet and OpenAlex.
+- **Author_Sequence_Number:** Position of the author in the publication's author list.
+- **Total_Authors:** Total number of authors on the publication.
 
 ---
 
