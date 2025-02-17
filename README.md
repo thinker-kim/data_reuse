@@ -52,15 +52,18 @@ This file provides detailed bibliographic metadata for the 29,326 publications t
 
 ## 3. Author Information
 
-### `author_info.csv`
-This dataset contains a unique list of authors from the filtered publications along with their metadata.
+### `icpsr_publication_authors_info.csv`
+This dataset contains a unique list of publication authors who have cited an ICPSR study or series, along with detailed metadata about their research careers.
 
 **Key Variables:**
-- **AUTHOR:** Original author name from ICPSR
-- **HOMONYMOUS:** Indicator for potential name ambiguity
-- **OPENALEX_AUTHOR_NAME:** Standardized author name (OpenAlex format)
-- **AUTHOR_ID:** Unique author identifier
-- **WORKS_API_URL:** URL to the list of all publications by the author
+- **Author:** The name of the publication author who cited an ICPSR study or series.
+- **Author_ID:** The unique identifier for the author. The default identifier is from SciScinet; however, in cases where the SciScinet ID is not available, the OpenAlex ID is provided. When multiple IDs exist, they are separated by semicolons (`;`).
+- **Unique_PaperIDs:** A semicolon-separated list of unique paper identifiers representing the publications in which the author has participated. This list includes not only publications that cite the ICPSR dataset but also other publications.
+- **Unique_PaperIDs_Count:** The total number of unique papers listed in **Unique_PaperIDs**.
+- **Min_Year:** The earliest publication year among the author's works.
+- **Max_Year:** The most recent publication year among the author's works.
+- **Research_Duration:** The span of years between **Min_Year** and **Max_Year**, indicating the duration of the author's research activity.
+- **H-index:** A metric that reflects the author's research impact based on both the productivity and citation impact of their publications.
 
 ---
 
