@@ -1,9 +1,9 @@
-# Data Reuse and Author Career Dynamics: An Analysis Based on ICPSR and OpenAlex
+# Data Reuse and Author Career Dynamics: An Analysis Based on ICPSR, SciSciNet, and OpenAlex
 
-This repository hosts datasets created from publications that cite ICPSR datasets (source: https://github.com/ICPSR/mica-data-descriptor/tree/main). These datasets have been cross-referenced with OpenAlex to include only those publications that:
+This repository hosts datasets created from publications that cite ICPSR datasets (source: https://github.com/ICPSR/mica-data-descriptor/tree/main). These datasets have been cross-referenced with OpenAlex and SciSciNet to include only those publications that:
 - Cite ICPSR datasets,
 - Possess a DOI, and
-- Have matching OpenAlex work IDs (for publications) and OpenAlex author IDs.
+- Have valid identifiers in either SciSciNet or OpenAlex (for both publications and authors).
 
 Below is a concise description of each dataset provided.
 
@@ -31,20 +31,23 @@ In this dataset, if a publication has multiple authors, each author is expanded 
 
 ---
 
-## 2. Publication Bibliography
+~~## 2. Publication Bibliography~~
 
-### `publications_bibliography.csv`
-This file provides detailed bibliographic metadata for the 29,326 publications that meet the filtering criteria. It includes information such as citation counts, topics, fields, and domains.
+~~### `publications_bibliography.csv`~~
 
-**Key Variables Include:**
-- **Ref_Id, Doi, OpenAlex_ID**
-- **Cited_By_Count**
-- **Authors, Institutions**
-- **Primary_Topic_ID, Primary_Topic_Display_Name**
-- **Topics_IDs, Topics_Display_Names**
-- **Subfield_ID, Subfield_Display_Name**
-- **Field_ID, Field_Display_Name**
-- **Domain_ID, Domain_Display_Name**
+~~This file provides detailed bibliographic metadata for the 29,326 publications that meet the filtering criteria. It includes information such as citation counts, topics, fields, and domains.~~
+
+~~**Key Variables Include:**~~  
+~~- **Ref_Id, Doi, OpenAlex_ID**~~  
+~~- **Cited_By_Count**~~  
+~~- **Authors, Institutions**~~  
+~~- **Primary_Topic_ID, Primary_Topic_Display_Name**~~  
+~~- **Topics_IDs, Topics_Display_Names**~~  
+~~- **Subfield_ID, Subfield_Display_Name**~~  
+~~- **Field_ID, Field_Display_Name**~~  
+~~- **Domain_ID, Domain_Display_Name**~~
+
+**Note:** Section 2 requires revision.
 
 ---
 
