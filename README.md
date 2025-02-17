@@ -12,11 +12,9 @@ Below is a concise description of each dataset provided.
 ## 1. ICPSR Publications Data
 
 ### `icpsr_publications.csv`
-This dataset contains publication records from the original 106,403 ICPSR publications.  
-Among these, only those publications with valid identifiers in both SciScinet and OpenAlex were retained—resulting in a total of **36,526** unique publications (based on REF_ID).  
-In this dataset, if a publication has multiple authors, each author is expanded into an individual record, so the total number of rows exceeds **36,526**.
+This dataset contains publication records from the original **106,403** ICPSR publications. Among these, only those publications with a valid identifier in either SciScinet or OpenAlex were retained—resulting in a total of **36,526** unique publications (based on REF_ID).
 
-**Number of unique authors: 15,733.**
+In this dataset, if a publication has multiple authors, each author is expanded into an individual record—resulting in a total row count that exceeds **36,526** and comprising **15,733** unique authors.
 
 **Key Variables:**
 - **REF_ID:** Unique publication identifier (from ICPSR).
