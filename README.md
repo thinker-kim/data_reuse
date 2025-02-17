@@ -84,7 +84,7 @@ This file captures indirect citation relationships between authors who are not c
 - **author1_institution_id, author2_institution_id:** The institution identifiers for **author_1** and **author_2**, respectively.
 - **affiliation_match:** A dummy variable indicating whether the affiliation information for the publication is complete; if either author's institution information is missing (i.e., NaN) for that publication, this value is NaN. In this dataset, the non-null ratio for this variable is **52.96%**; among non-null entries, **98.53%** have a value of 0 and **1.47%** have a value of 1.
 - **source_total_authors, target_total_authors:** The total number of authors on the source and target publications, respectively.
-- **historical_institution_match_flag:** A dummy variable computed by comparing the entire affiliation history of the author; if at least one affiliation matches across their publication history, this value is 1, otherwise it is NaN if any affiliation information is missing. The non-null ratio for this variable is **89.06%**; among non-null entries, **82.99%** have a value of 0 and **17.01%** have a value of 1.
+- **historical_affiliation_match:** A dummy variable computed by comparing the entire affiliation history of the author; if at least one affiliation matches across their publication history, this value is 1, otherwise it is NaN if any affiliation information is missing. The non-null ratio for this variable is **89.06%**; among non-null entries, **82.99%** have a value of 0 and **17.01%** have a value of 1.
 
 ~~### b. `author_data_indirect_citation_pairs_summary.csv`~~  
 ~~This summary dataset aggregates indirect citation information for each author, providing an overview of their citation connections.~~  
