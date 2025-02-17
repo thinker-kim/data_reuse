@@ -72,74 +72,81 @@ This dataset contains a unique list of publication authors who have cited an ICP
 
 ## 4. Indirect Data Citation Networks
 
-### a. `author_data_indirect_citation_pairs.csv`
-This file captures indirect citation relationships between authors who are not coauthors but have independently cited the same ICPSR dataset. In this context, **shared_study_series_num** is a core variable indicating which ICPSR study/series numbers each publication cited to establish the indirect citation relationship.
+### a. `author_indirect_datacitation_pairs.csv`
+This file captures indirect citation relationships between authors who are not coauthors but have independently cited the same ICPSR dataset. Although the dataset contains **43,929,587** total citation pair records, the number of unique author pairs is **3,938,655**. In this context, **shared_study_series_num** is a core variable indicating which ICPSR study/series number(s) were cited by the publications to establish the indirect citation relationship.
 
 **Key Variables:**
-- **author_1, author_2:** Author pair
-- **source_REF_ID, target_REF_ID:** ICPSR publication IDs for the citing publications
-- **source_YEAR_PUB, target_YEAR_PUB:** Publication years for the corresponding records
-- **shared_study_series_num:** The core variable representing the specific ICPSR study/series numbers cited by each publication
+- **author_1, author_2:** The pair of authors involved in the indirect citation relationship. These pairs are undirected (order does not matter) and are always listed in alphabetical order.
+- **source_REF_ID, target_REF_ID:** The ICPSR publication identifiers for the citing publications (source and target, respectively).
+- **source_YEAR_PUB, target_YEAR_PUB:** The publication years for the corresponding source and target publications.
+- **shared_study_series_num:** The specific ICPSR study/series number(s) cited by each publication that links the author pair.
+- **author1_author_id, author2_author_id:** The author identifiers corresponding to **author_1** and **author_2**, respectively.
+- **author1_institution_id, author2_institution_id:** The institution identifiers for **author_1** and **author_2**, respectively.
+- **affiliation_match:** A dummy variable indicating whether the affiliation information for the publication is complete; if either author's institution information is missing (i.e., NaN) for that publication, this value is NaN. In this dataset, the non-null ratio for this variable is **52.96%**; among non-null entries, **98.53%** have a value of 0 and **1.47%** have a value of 1.
+- **source_total_authors, target_total_authors:** The total number of authors on the source and target publications, respectively.
+- **historical_institution_match_flag:** A dummy variable computed by comparing the entire affiliation history of the author; if at least one affiliation matches across their publication history, this value is 1, otherwise it is NaN if any affiliation information is missing. The non-null ratio for this variable is **89.06%**; among non-null entries, **82.99%** have a value of 0 and **17.01%** have a value of 1.
 
-### b. `author_data_indirect_citation_pairs_summary.csv`
-This summary dataset aggregates indirect citation information for each author, providing an overview of their citation connections.
+~~### b. `author_data_indirect_citation_pairs_summary.csv`~~  
+~~This summary dataset aggregates indirect citation information for each author, providing an overview of their citation connections.~~  
 
-**Data Structure:**
-- **author_id:** Unique identifier for an author  
-- **Total_Unique_REF_IDs:** Count of unique publication REF_IDs associated with the author  
-- **Unique_REF_IDs:** List of unique publication REF_IDs (stored as an object)  
-- **sum_unique_nums:** Sum of unique numbers across references (aggregated metric)  
-- **Total_Unique_STUD_NUMS:** Count of unique ICPSR study numbers cited by the author  
-- **Unique_STUD_NUMS:** List of unique study numbers (with some missing values)  
-- **Total_Unique_SERIES_NUMS:** Count of unique ICPSR series numbers cited  
-- **Unique_SERIES_NUMS:** List of unique series numbers (partial data)  
-- **Total_Indirect_Connections:** Total number of indirect citation connections for that author  
-- **Indirect_Authors:** List of indirectly connected authors (present in a subset of records)  
+~~**Data Structure:**~~  
+~~- **author_id:** Unique identifier for an author~~  
+~~- **Total_Unique_REF_IDs:** Count of unique publication REF_IDs associated with the author~~  
+~~- **Unique_REF_IDs:** List of unique publication REF_IDs (stored as an object)~~  
+~~- **sum_unique_nums:** Sum of unique numbers across references (aggregated metric)~~  
+~~- **Total_Unique_STUD_NUMS:** Count of unique ICPSR study numbers cited by the author~~  
+~~- **Unique_STUD_NUMS:** List of unique study numbers (with some missing values)~~  
+~~- **Total_Unique_SERIES_NUMS:** Count of unique ICPSR series numbers cited~~  
+~~- **Unique_SERIES_NUMS:** List of unique series numbers (partial data)~~  
+~~- **Total_Indirect_Connections:** Total number of indirect citation connections for that author~~  
+~~- **Indirect_Authors:** List of indirectly connected authors (present in a subset of records)~~  
 
-*Data Shape:* 9,763 entries, with 10 columns in total.
+~~*Data Shape:* 9,763 entries, with 10 columns in total.~~
 
+**Note:** Section 4.b requires revision.
 ---
 
-## 5. Coauthor Pairs
+~~## 5. Coauthor Pairs~~
 
-### `coauthor_pairs.csv`
-This dataset lists pairs of authors who have coauthored publications. It is derived from the complete set of publication records by authors who have published works citing ICPSR datasets, meaning it encompasses all publication data from these authors.
+~~### `coauthor_pairs.csv`~~  
+~~This dataset lists pairs of authors who have coauthored publications. It is derived from the complete set of publication records by authors who have published works citing ICPSR datasets, meaning it encompasses all publication data from these authors.~~
 
-**Key Variables:**
-- **author_1, author_2:** The pair of coauthors
-- **shared_work_id:** Identifier for the shared publication that both authors contributed to
-- **publication_year:** Year in which the shared publication was released
+~~**Key Variables:**~~  
+~~- **author_1, author_2:** The pair of coauthors~~  
+~~- **shared_work_id:** Identifier for the shared publication that both authors contributed to~~  
+~~- **publication_year:** Year in which the shared publication was released~~
 
----
+~~---~~
 
-## 6. Future and Prior Coauthorships
+~~## 6. Future and Prior Coauthorships~~
 
-### a. `future_coauthorships.csv`
-This file identifies author pairs that did not have an established coauthorship relationship initially but later coauthored publications following an indirect citation link.
+~~### a. `future_coauthorships.csv`~~  
+~~This file identifies author pairs that did not have an established coauthorship relationship initially but later coauthored publications following an indirect citation link.~~
 
-**Key Variables:**
-- **author_1, author_2**
-- **source_REF_ID, target_REF_ID**
-- **source_YEAR_PUB, target_YEAR_PUB**
-- **shared_study_series_num:** Core variable indicating the specific ICPSR study/series numbers cited by each publication, establishing the indirect citation link
-- **max_YEAR_PUB:** The latest publication year among the pair
-- **source_target:** Directional citation indicator
-- **shared_work_ids:** List of shared publication IDs
-- **publication_years:** Years of the publications
+~~**Key Variables:**~~  
+~~- **author_1, author_2**~~  
+~~- **source_REF_ID, target_REF_ID**~~  
+~~- **source_YEAR_PUB, target_YEAR_PUB**~~  
+~~- **shared_study_series_num:** Core variable indicating the specific ICPSR study/series numbers cited by each publication, establishing the indirect citation link~~  
+~~- **max_YEAR_PUB:** The latest publication year among the pair~~  
+~~- **source_target:** Directional citation indicator~~  
+~~- **shared_work_ids:** List of shared publication IDs~~  
+~~- **publication_years:** Years of the publications~~
 
-*Unique Future Coauthorships:* **5,464 pairs** (0.34% of all unique author pairs)  
-*Unique authors in future collaborations:* **3,259 authors** (34.3% of all authors)
+~~*Unique Future Coauthorships:* **5,464 pairs** (0.34% of all unique author pairs)~~  
+~~*Unique authors in future collaborations:* **3,259 authors** (34.3% of all authors)~~
 
-### b. `prior_coauthorships.csv`
-This dataset contains author pairs that were already established as coauthors.
+~~### b. `prior_coauthorships.csv`~~  
+~~This dataset contains author pairs that were already established as coauthors.~~
 
-### c. `non_coauthorships.csv`
-This file lists author pairs that never coauthored publications, either before or after the indirect citation event.
+~~### c. `non_coauthorships.csv`~~  
+~~This file lists author pairs that never coauthored publications, either before or after the indirect citation event.~~
 
-**Summary Statistics for Indirect Citation Pairs:**
-- **Future Coauthorships:** 5,464 (0.34%)
-- **Prior Coauthorships:** 11,605 (0.71%)
-- **Non-Coauthorships:** 1,612,169 (98.95%)
-- **Total Unique Author Pairs:** 1,629,238
+~~**Summary Statistics for Indirect Citation Pairs:**~~  
+~~- **Future Coauthorships:** 5,464 (0.34%)~~  
+~~- **Prior Coauthorships:** 11,605 (0.71%)~~  
+~~- **Non-Coauthorships:** 1,612,169 (98.95%)~~  
+~~- **Total Unique Author Pairs:** 1,629,238~~
 
+**Note:** Section 5 and 6 requires revision.
 ---
